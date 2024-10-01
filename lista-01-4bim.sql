@@ -328,6 +328,7 @@ INSERT INTO matricula (id_aluno, id_disciplina, data_matricula, status) VALUES
 -- 1. Exibir lista de alunos e seus cursos
 -- Crie uma view que mostre o nome dos alunos e as disciplinas em que estão matriculados, incluindo o nome do curso.
 
+CREATE OR REPLACE VIEW VW_1 AS
 SELECT 
 aluno.nome,
 disciplina.nome as disciplina,
@@ -339,6 +340,8 @@ inner join disciplina
 on matricula.id_disciplina = disciplina.id_disciplina
 inner join curso
 on disciplina.id_curso = curso.id_curso;
+
+SELECT * FROM VW_1;
 
 -- 2. Exibir total de alunos por disciplina
 -- Crie uma view que mostre o nome das disciplinas e a quantidade de alunos matriculados em cada uma.
