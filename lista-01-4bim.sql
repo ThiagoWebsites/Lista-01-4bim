@@ -130,3 +130,5 @@ turma.id_turma,
 turma.semestre
 from turma
 where turma.semestre = 2024.1;
+
+-- Não fiz o resto pois o mysql no meu computador esta dando erro e não consegui fazer em casa 
